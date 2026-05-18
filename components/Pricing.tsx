@@ -4,7 +4,7 @@ type Plan = { name: string; price: string; period: string; setup: string; desc: 
 
 export default function Pricing({ lang, content }: { lang: Lang; content: { heading: string; sub: string; plans: Plan[]; note: string; setupNote: string } }) {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-zinc-800/60">
+    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-zinc-800/60">
       <div className="mx-auto max-w-5xl">
         <div className="text-center mb-14">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">{content.heading}</h2>

@@ -25,9 +25,9 @@ export default function Nav({ lang, nav }: { lang: Lang; nav: Record<string, str
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <Link href={`${base}/features`} className="text-zinc-400 hover:text-zinc-100 transition-colors">{nav.features}</Link>
-            <Link href={`${base}/data-security`} className="text-zinc-400 hover:text-zinc-100 transition-colors">{nav.security}</Link>
-            <Link href={`${base}/pricing`} className="text-zinc-400 hover:text-zinc-100 transition-colors">{nav.pricing}</Link>
+            <a href={`${base}#features`} className="text-zinc-400 hover:text-zinc-100 transition-colors">{nav.features}</a>
+            <a href={`${base}#data-security`} className="text-zinc-400 hover:text-zinc-100 transition-colors">{nav.security}</a>
+            <a href={`${base}#pricing`} className="text-zinc-400 hover:text-zinc-100 transition-colors">{nav.pricing}</a>
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
@@ -59,9 +59,9 @@ export default function Nav({ lang, nav }: { lang: Lang; nav: Record<string, str
       {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-zinc-800 bg-zinc-950 px-4 py-4 space-y-3 text-sm">
-          <Link href={`${base}/features`} className="block text-zinc-400">{nav.features}</Link>
-          <Link href={`${base}/data-security`} className="block text-zinc-400">{nav.security}</Link>
-          <Link href={`${base}/pricing`} className="block text-zinc-400">{nav.pricing}</Link>
+          <a href={`${base}#features`} className="block text-zinc-400">{nav.features}</a>
+          <a href={`${base}#data-security`} className="block text-zinc-400">{nav.security}</a>
+          <a href={`${base}#pricing`} className="block text-zinc-400">{nav.pricing}</a>
           <a href={DEMO_URL} target="_blank" rel="noopener noreferrer" className="block text-emerald-400">{nav.demo}</a>
           <div className="flex gap-2 pt-2">
             {(["en","es","pt"] as Lang[]).map(l => (

@@ -2,7 +2,7 @@ import type { Lang } from "@/lib/content";
 
 export default function DataSection({ lang, content }: { lang: Lang; content: { eyebrow: string; heading: string; body: string; points: string[]; contrast: string } }) {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-zinc-800/60">
+    <section id="data-security" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-zinc-800/60">
       <div className="mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
