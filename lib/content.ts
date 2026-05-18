@@ -245,7 +245,7 @@ export const pricing = {
         name: "Intelligence",
         price: "$1,000",
         period: "/mo",
-        setup: "One-time setup: $2,500",
+        setup: "One-time setup: $1,000",
         desc: "Full analytics dashboard for your Vicidial operation.",
         features: [
           "Real-time executive dashboard",
@@ -263,7 +263,7 @@ export const pricing = {
         name: "Intelligence + AI Calls",
         price: "$2,500",
         period: "/mo + usage",
-        setup: "One-time setup: $3,500",
+        setup: "One-time setup: $2,500",
         desc: "Everything in Intelligence, plus AI ears on every call.",
         features: [
           "Everything in Intelligence",
@@ -289,7 +289,7 @@ export const pricing = {
         name: "Intelligence",
         price: "$1.000",
         period: "/mes",
-        setup: "Configuración inicial: $2.500",
+        setup: "Configuración inicial: $1.000",
         desc: "Dashboard de analítica completo para tu operación Vicidial.",
         features: [
           "Dashboard ejecutivo en tiempo real",
@@ -307,7 +307,7 @@ export const pricing = {
         name: "Intelligence + IA en Llamadas",
         price: "$2.500",
         period: "/mes + uso",
-        setup: "Configuración inicial: $3.500",
+        setup: "Configuración inicial: $2.500",
         desc: "Todo en Intelligence, más IA en cada llamada.",
         features: [
           "Todo lo de Intelligence",
@@ -333,7 +333,7 @@ export const pricing = {
         name: "Intelligence",
         price: "$1.000",
         period: "/mês",
-        setup: "Implantação inicial: $2.500",
+        setup: "Implantação inicial: $1.000",
         desc: "Dashboard de analytics completo para sua operação Vicidial.",
         features: [
           "Dashboard executivo em tempo real",
@@ -351,7 +351,7 @@ export const pricing = {
         name: "Intelligence + IA em Chamadas",
         price: "$2.500",
         period: "/mês + uso",
-        setup: "Implantação inicial: $3.500",
+        setup: "Implantação inicial: $2.500",
         desc: "Tudo do Intelligence, mais IA em cada chamada.",
         features: [
           "Tudo do Intelligence",
