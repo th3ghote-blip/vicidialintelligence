@@ -6,7 +6,7 @@ export default function ContactSection({ lang, content }: { lang: Lang; content:
       <div className="mx-auto max-w-2xl">
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">{content.heading}</h2>
-          <p className="text-zinc-400">{content.sub}</p>
+          <p className="text-zinc-300">{content.sub}</p>
         </div>
         <form action={`https://formspree.io/f/info@aiappgenius.com`} method="POST" className="space-y-4">
           <div className="grid sm:grid-cols-2 gap-4">
@@ -23,7 +23,7 @@ export default function ContactSection({ lang, content }: { lang: Lang; content:
             {content.send}
           </button>
         </form>
-        <p className="text-center text-sm text-zinc-600 mt-6">
+        <p className="text-center text-sm text-zinc-400 mt-6">
           {content.or}{" "}
           <a href="mailto:info@aiappgenius.com" className="text-emerald-500 hover:text-emerald-400 underline underline-offset-2">
             info@aiappgenius.com

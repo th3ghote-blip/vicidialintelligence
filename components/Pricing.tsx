@@ -21,10 +21,10 @@ export default function Pricing({ lang, content }: { lang: Lang; content: { head
                 <span className="text-4xl font-bold text-white">{plan.price}</span>
                 <span className="text-zinc-400 mb-1 text-sm">{plan.period}</span>
               </div>
-              <p className="text-sm text-zinc-500 mb-6">{plan.desc}</p>
+              <p className="text-sm text-zinc-300 mb-6">{plan.desc}</p>
               <ul className="space-y-3 flex-1 mb-8">
                 {plan.features.map((f, j) => (
-                  <li key={j} className="flex items-start gap-2.5 text-sm text-zinc-400">
+                  <li key={j} className="flex items-start gap-2.5 text-sm text-zinc-300">
                     <svg className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
@@ -38,7 +38,7 @@ export default function Pricing({ lang, content }: { lang: Lang; content: { head
             </div>
           ))}
         </div>
-        <p className="text-center text-xs text-zinc-600 mt-6">{content.note}</p>
+        <p className="text-center text-xs text-zinc-400 mt-6">{content.note}</p>
       </div>
     </section>
   );

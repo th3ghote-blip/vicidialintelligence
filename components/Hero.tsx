@@ -26,7 +26,7 @@ export default function Hero({ lang, content }: { lang: Lang; content: { eyebrow
         </h1>
 
         {/* Sub */}
-        <p className="mx-auto max-w-2xl text-lg text-zinc-400 leading-relaxed mb-10">
+        <p className="mx-auto max-w-2xl text-lg text-zinc-300 leading-relaxed mb-10">
           {content.sub}
         </p>
 
@@ -49,7 +49,7 @@ export default function Hero({ lang, content }: { lang: Lang; content: { eyebrow
         </div>
 
         {/* Social proof */}
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-zinc-600">
+        <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-zinc-400">
           {["No data moved off your server", "Read-only connection", "Live in 48 hours"].map((t, i) => (
             <span key={i} className="flex items-center gap-1.5">
               <svg className="h-3.5 w-3.5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

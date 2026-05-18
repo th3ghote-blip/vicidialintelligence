@@ -11,7 +11,7 @@ export default function AISection({ lang, content }: { lang: Lang; content: { ey
                 {content.eyebrow}
               </div>
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">{content.heading}</h2>
-              <p className="text-zinc-400 leading-relaxed mb-8">{content.body}</p>
+              <p className="text-zinc-300 leading-relaxed mb-8">{content.body}</p>
               <div className="space-y-4">
                 {content.extras.map((e, i) => (
                   <div key={i} className="flex gap-3">
@@ -22,7 +22,7 @@ export default function AISection({ lang, content }: { lang: Lang; content: { ey
                     </div>
                     <div>
                       <div className="text-sm font-semibold text-zinc-200">{e.title}</div>
-                      <div className="text-sm text-zinc-500 mt-0.5">{e.body}</div>
+                      <div className="text-sm text-zinc-300 mt-0.5">{e.body}</div>
                     </div>
                   </div>
                 ))}

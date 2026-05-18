@@ -10,14 +10,14 @@ export default function DataSection({ lang, content }: { lang: Lang; content: { 
               🔒 {content.eyebrow}
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">{content.heading}</h2>
-            <p className="text-zinc-400 leading-relaxed mb-8">{content.body}</p>
+            <p className="text-zinc-300 leading-relaxed mb-8">{content.body}</p>
             <ul className="space-y-3">
               {content.points.map((p, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <svg className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
-                  <span className="text-sm text-zinc-400">{p}</span>
+                  <span className="text-sm text-zinc-300">{p}</span>
                 </li>
               ))}
             </ul>
