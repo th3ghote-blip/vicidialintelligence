@@ -197,6 +197,7 @@ export const pricing = {
         name: "Intelligence",
         price: "$1,000",
         period: "/mo",
+        setup: "One-time setup: $2,500",
         desc: "Full analytics dashboard for your Vicidial operation.",
         features: [
           "Real-time executive dashboard",
@@ -214,6 +215,7 @@ export const pricing = {
         name: "Intelligence + AI Calls",
         price: "$2,500",
         period: "/mo + usage",
+        setup: "One-time setup: $3,500",
         desc: "Everything in Intelligence, plus AI ears on every call.",
         features: [
           "Everything in Intelligence",
@@ -229,6 +231,7 @@ export const pricing = {
       },
     ],
     note: "Usage costs (transcription + AI) passed through at cost + 15%. Typical call centre: $300–500/mo additional.",
+    setupNote: "One-time setup covers integration with your Vicidial server, dashboard configuration, and team onboarding.",
   },
   es: {
     heading: "Precios claros",
@@ -238,6 +241,7 @@ export const pricing = {
         name: "Intelligence",
         price: "$1.000",
         period: "/mes",
+        setup: "Configuración inicial: $2.500",
         desc: "Dashboard de analítica completo para tu operación Vicidial.",
         features: [
           "Dashboard ejecutivo en tiempo real",
@@ -255,6 +259,7 @@ export const pricing = {
         name: "Intelligence + IA en Llamadas",
         price: "$2.500",
         period: "/mes + uso",
+        setup: "Configuración inicial: $3.500",
         desc: "Todo en Intelligence, más IA en cada llamada.",
         features: [
           "Todo lo de Intelligence",
@@ -270,6 +275,7 @@ export const pricing = {
       },
     ],
     note: "Los costos de uso (transcripción + IA) se repercuten a costo + 15%. Call center típico: $300–500/mes adicional.",
+    setupNote: "La configuración inicial cubre la integración con tu servidor Vicidial, configuración del dashboard e incorporación del equipo.",
   },
   pt: {
     heading: "Preços transparentes",
@@ -279,6 +285,7 @@ export const pricing = {
         name: "Intelligence",
         price: "$1.000",
         period: "/mês",
+        setup: "Implantação inicial: $2.500",
         desc: "Dashboard de analytics completo para sua operação Vicidial.",
         features: [
           "Dashboard executivo em tempo real",
@@ -296,6 +303,7 @@ export const pricing = {
         name: "Intelligence + IA em Chamadas",
         price: "$2.500",
         period: "/mês + uso",
+        setup: "Implantação inicial: $3.500",
         desc: "Tudo do Intelligence, mais IA em cada chamada.",
         features: [
           "Tudo do Intelligence",
@@ -311,6 +319,7 @@ export const pricing = {
       },
     ],
     note: "Custos de uso (transcrição + IA) repassados a custo + 15%. Call center típico: $300–500/mês adicional.",
+    setupNote: "A implantação inicial cobre integração com seu servidor Vicidial, configuração do dashboard e treinamento da equipe.",
   },
 };
 
@@ -348,4 +357,43 @@ export const footer = {
   en: { tagline: "AI-powered intelligence for Vicidial call centres.", rights: "All rights reserved." },
   es: { tagline: "Inteligencia con IA para call centers Vicidial.", rights: "Todos los derechos reservados." },
   pt: { tagline: "Inteligência com IA para call centers Vicidial.", rights: "Todos os direitos reservados." },
+};
+
+export const mockup = {
+  en: {
+    navItems: ["Summary", "Alerts", "Leads", "Agents", "Momentum", "Insights"],
+    kpiLabels: ["Sales", "Calls", "Close Rate", "Trend"],
+    kpiSubs: ["+12.3% vs yesterday", "Today", "284 sales", "vs prior period"],
+    chartTitle: "Sales by hour — today",
+    campaignTitle: "Top Campaigns",
+    momentumTitle: "Agent Momentum",
+    agentFlags: ["🔥 On a streak", "📈 Rising", "⚠️ Watch list", "⏱ Short calls"],
+    badgeMock: "Mock mode",
+    caption: "Live demo available at",
+    customNote: "Every dashboard is built to your operation — campaigns, agents, and KPIs configured specifically for you. The live demo is a baseline example.",
+  },
+  es: {
+    navItems: ["Resumen", "Alertas", "Leads", "Agentes", "Momentum", "Insights"],
+    kpiLabels: ["Ventas", "Llamadas", "Tasa de Cierre", "Tendencia"],
+    kpiSubs: ["+12.3% vs ayer", "Hoy", "284 ventas", "vs período anterior"],
+    chartTitle: "Ventas por hora — hoy",
+    campaignTitle: "Top Campañas",
+    momentumTitle: "Momentum de Agentes",
+    agentFlags: ["🔥 En racha", "📈 Subiendo", "⚠️ Vigilar", "⏱ Llamadas cortas"],
+    badgeMock: "Modo demo",
+    caption: "Demo en vivo en",
+    customNote: "Cada dashboard se construye para tu operación — campañas, agentes y KPIs configurados específicamente para ti. La demo es un ejemplo base.",
+  },
+  pt: {
+    navItems: ["Resumo", "Alertas", "Leads", "Agentes", "Momentum", "Insights"],
+    kpiLabels: ["Vendas", "Chamadas", "Taxa de Fechamento", "Tendência"],
+    kpiSubs: ["+12.3% vs ontem", "Hoje", "284 vendas", "vs período anterior"],
+    chartTitle: "Vendas por hora — hoje",
+    campaignTitle: "Top Campanhas",
+    momentumTitle: "Momentum de Agentes",
+    agentFlags: ["🔥 Em alta", "📈 Subindo", "⚠️ Observar", "⏱ Chamadas curtas"],
+    badgeMock: "Modo demo",
+    caption: "Demo ao vivo em",
+    customNote: "Cada dashboard é construído para a sua operação — campanhas, agentes e KPIs configurados especificamente para você. A demo é um exemplo base.",
+  },
 };

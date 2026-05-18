@@ -1,8 +1,8 @@
 import type { Lang } from "@/lib/content";
 
-type Plan = { name: string; price: string; period: string; desc: string; features: string[]; cta: string; highlight: boolean };
+type Plan = { name: string; price: string; period: string; setup: string; desc: string; features: string[]; cta: string; highlight: boolean };
 
-export default function Pricing({ lang, content }: { lang: Lang; content: { heading: string; sub: string; plans: Plan[]; note: string } }) {
+export default function Pricing({ lang, content }: { lang: Lang; content: { heading: string; sub: string; plans: Plan[]; note: string; setupNote: string } }) {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-zinc-800/60">
       <div className="mx-auto max-w-5xl">
@@ -17,10 +17,11 @@ export default function Pricing({ lang, content }: { lang: Lang; content: { head
                 <div className="text-xs font-semibold text-emerald-400 uppercase tracking-wider mb-3">Most Popular</div>
               )}
               <h3 className="text-lg font-semibold text-white mb-1">{plan.name}</h3>
-              <div className="flex items-end gap-1 mb-2">
+              <div className="flex items-end gap-1 mb-1">
                 <span className="text-4xl font-bold text-white">{plan.price}</span>
                 <span className="text-zinc-400 mb-1 text-sm">{plan.period}</span>
               </div>
+              <div className="text-xs text-zinc-500 mb-3">{plan.setup}</div>
               <p className="text-sm text-zinc-300 mb-6">{plan.desc}</p>
               <ul className="space-y-3 flex-1 mb-8">
                 {plan.features.map((f, j) => (
@@ -38,7 +39,8 @@ export default function Pricing({ lang, content }: { lang: Lang; content: { head
             </div>
           ))}
         </div>
-        <p className="text-center text-xs text-zinc-400 mt-6">{content.note}</p>
+        <p className="text-center text-xs text-zinc-400 mt-4">{content.setupNote}</p>
+        <p className="text-center text-xs text-zinc-500 mt-2">{content.note}</p>
       </div>
     </section>
   );

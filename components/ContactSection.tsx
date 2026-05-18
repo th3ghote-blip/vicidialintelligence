@@ -8,7 +8,7 @@ export default function ContactSection({ lang, content }: { lang: Lang; content:
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">{content.heading}</h2>
           <p className="text-zinc-300">{content.sub}</p>
         </div>
-        <form action={`https://formspree.io/f/info@aiappgenius.com`} method="POST" className="space-y-4">
+        <form action="https://formspree.io/info@aiappgenius.com" method="POST" className="space-y-4">
           <div className="grid sm:grid-cols-2 gap-4">
             <input type="text" name="name" required placeholder={content.namePlaceholder}
               className="w-full rounded-xl border border-zinc-700 bg-zinc-900 px-4 py-3 text-sm text-zinc-200 placeholder-zinc-600 focus:border-emerald-500 focus:outline-none transition-colors" />

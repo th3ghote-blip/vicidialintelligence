@@ -2,7 +2,37 @@ import type { Lang } from "@/lib/content";
 
 const DEMO_URL = "https://vicidial-insights-ui.vercel.app";
 
-export default function DashboardMockup({ lang }: { lang: Lang }) {
+type MockupContent = {
+  navItems: string[];
+  kpiLabels: string[];
+  kpiSubs: string[];
+  chartTitle: string;
+  campaignTitle: string;
+  momentumTitle: string;
+  agentFlags: string[];
+  badgeMock: string;
+  caption: string;
+  customNote: string;
+};
+
+const NAV_ICONS = ["📊", "🔔", "🎯", "👥", "⚡", "📈"];
+const NAV_BADGES = [null, "3", null, null, null, null];
+
+export default function DashboardMockup({ lang, content }: { lang: Lang; content: MockupContent }) {
+  const kpis = [
+    { value: "284", up: true },
+    { value: "1,847", up: null },
+    { value: "15.4%", up: null },
+    { value: "+12.3%", up: true },
+  ];
+
+  const agents = [
+    { name: "María G.", color: "emerald" },
+    { name: "Carlos R.", color: "sky" },
+    { name: "Ana L.", color: "amber" },
+    { name: "Pedro M.", color: "red" },
+  ];
+
   return (
     <section className="relative pb-20 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
@@ -22,7 +52,7 @@ export default function DashboardMockup({ lang }: { lang: Lang }) {
               </div>
             </div>
             <div className="flex items-center gap-1.5">
-              <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-400 border border-amber-500/30 font-medium">Mock mode</span>
+              <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-400 border border-amber-500/30 font-medium">{content.badgeMock}</span>
               <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-medium">Live</span>
             </div>
           </div>
@@ -38,18 +68,13 @@ export default function DashboardMockup({ lang }: { lang: Lang }) {
                   <div className="text-[8px] text-zinc-500">Call Analytics</div>
                 </div>
               </div>
-              {[
-                { label: "Summary", active: true, icon: "📊" },
-                { label: "Alerts", active: false, icon: "🔔", badge: "3" },
-                { label: "Leads", active: false, icon: "🎯" },
-                { label: "Agents", active: false, icon: "👥" },
-                { label: "Momentum", active: false, icon: "⚡" },
-                { label: "Insights", active: false, icon: "📈" },
-              ].map((item) => (
-                <div key={item.label} className={`flex items-center gap-2 px-3 py-2 rounded-lg text-[11px] ${item.active ? "bg-zinc-800 text-white" : "text-zinc-500"}`}>
-                  <span>{item.icon}</span>
-                  <span className="flex-1">{item.label}</span>
-                  {item.badge && <span className="text-[9px] px-1.5 py-0.5 rounded-md bg-red-500/15 text-red-400 border border-red-500/30">{item.badge}</span>}
+              {content.navItems.map((label, i) => (
+                <div key={label} className={`flex items-center gap-2 px-3 py-2 rounded-lg text-[11px] ${i === 0 ? "bg-zinc-800 text-white" : "text-zinc-500"}`}>
+                  <span>{NAV_ICONS[i]}</span>
+                  <span className="flex-1">{label}</span>
+                  {NAV_BADGES[i] && (
+                    <span className="text-[9px] px-1.5 py-0.5 rounded-md bg-red-500/15 text-red-400 border border-red-500/30">{NAV_BADGES[i]}</span>
+                  )}
                 </div>
               ))}
               <div className="mt-auto pt-3 border-t border-zinc-800 space-y-1.5">
@@ -66,14 +91,9 @@ export default function DashboardMockup({ lang }: { lang: Lang }) {
             <div className="flex-1 p-4 space-y-4 min-h-[380px]">
               {/* KPI row */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                {[
-                  { label: "Sales", value: "284", sub: "+12.3% vs yesterday", up: true },
-                  { label: "Calls", value: "1,847", sub: "Today", up: null },
-                  { label: "Close Rate", value: "15.4%", sub: "284 sales", up: null },
-                  { label: "Trend", value: "+12.3%", sub: "vs prior period", up: true },
-                ].map((kpi) => (
-                  <div key={kpi.label} className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-3">
-                    <div className="text-[9px] uppercase tracking-wider text-zinc-500 font-semibold mb-1">{kpi.label}</div>
+                {kpis.map((kpi, i) => (
+                  <div key={i} className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-3">
+                    <div className="text-[9px] uppercase tracking-wider text-zinc-500 font-semibold mb-1">{content.kpiLabels[i]}</div>
                     <div className="flex items-end gap-1">
                       <div className="text-lg font-semibold text-zinc-100">{kpi.value}</div>
                       {kpi.up !== null && (
@@ -82,7 +102,7 @@ export default function DashboardMockup({ lang }: { lang: Lang }) {
                         </svg>
                       )}
                     </div>
-                    <div className="text-[9px] text-zinc-600 mt-0.5">{kpi.sub}</div>
+                    <div className="text-[9px] text-zinc-600 mt-0.5">{content.kpiSubs[i]}</div>
                   </div>
                 ))}
               </div>
@@ -91,7 +111,7 @@ export default function DashboardMockup({ lang }: { lang: Lang }) {
               <div className="grid sm:grid-cols-5 gap-2">
                 {/* Bar chart */}
                 <div className="sm:col-span-3 rounded-lg border border-zinc-800 bg-zinc-900/60 p-3">
-                  <div className="text-[10px] font-semibold text-zinc-300 mb-3">Sales by hour — today</div>
+                  <div className="text-[10px] font-semibold text-zinc-300 mb-3">{content.chartTitle}</div>
                   <div className="flex items-end gap-1 h-20">
                     {[3,5,8,12,15,18,22,26,24,28,32,35,30,28,25,22,18,14,10,7,4,2,1,0].map((v, i) => (
                       <div key={i} className="flex-1 flex flex-col items-center justify-end" style={{ height: "100%" }}>
@@ -106,7 +126,7 @@ export default function DashboardMockup({ lang }: { lang: Lang }) {
 
                 {/* Campaign table */}
                 <div className="sm:col-span-2 rounded-lg border border-zinc-800 bg-zinc-900/60 p-3">
-                  <div className="text-[10px] font-semibold text-zinc-300 mb-2">Top Campaigns</div>
+                  <div className="text-[10px] font-semibold text-zinc-300 mb-2">{content.campaignTitle}</div>
                   <div className="space-y-1.5">
                     {[
                       { name: "Solar LATAM", sales: 89, rate: "18.2%" },
@@ -126,17 +146,12 @@ export default function DashboardMockup({ lang }: { lang: Lang }) {
 
               {/* Agent momentum strip */}
               <div className="rounded-lg border border-zinc-800 bg-zinc-900/60 p-3">
-                <div className="text-[10px] font-semibold text-zinc-300 mb-2">Agent Momentum</div>
+                <div className="text-[10px] font-semibold text-zinc-300 mb-2">{content.momentumTitle}</div>
                 <div className="flex gap-2 overflow-x-auto">
-                  {[
-                    { name: "María G.", flag: "🔥 En racha", color: "emerald" },
-                    { name: "Carlos R.", flag: "📈 Subiendo", color: "sky" },
-                    { name: "Ana L.", flag: "⚠️ Vigilar", color: "amber" },
-                    { name: "Pedro M.", flag: "⏱ Llamadas cortas", color: "red" },
-                  ].map((a) => (
+                  {agents.map((a, i) => (
                     <div key={a.name} className="flex-shrink-0 rounded-lg border border-zinc-700 bg-zinc-900 px-3 py-2 min-w-32">
                       <div className="text-[10px] font-medium text-zinc-200">{a.name}</div>
-                      <div className={`text-[9px] mt-1 text-${a.color}-400`}>{a.flag}</div>
+                      <div className={`text-[9px] mt-1 text-${a.color}-400`}>{content.agentFlags[i]}</div>
                     </div>
                   ))}
                 </div>
@@ -145,9 +160,12 @@ export default function DashboardMockup({ lang }: { lang: Lang }) {
           </div>
         </div>
 
+        {/* Custom note */}
+        <p className="text-center text-xs text-zinc-400 mt-4 max-w-xl mx-auto">{content.customNote}</p>
+
         {/* Caption */}
-        <p className="text-center text-xs text-zinc-600 mt-4">
-          Live demo available at{" "}
+        <p className="text-center text-xs text-zinc-600 mt-2">
+          {content.caption}{" "}
           <a href={DEMO_URL} target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:text-emerald-400 underline underline-offset-2">
             vicidial-insights-ui.vercel.app
           </a>

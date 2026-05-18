@@ -1,4 +1,4 @@
-import { type Lang, LANGS, hero, features, aiSection, dataSection, pricing, contact, footer, nav } from "@/lib/content";
+import { type Lang, LANGS, hero, features, aiSection, dataSection, pricing, contact, footer, nav, mockup } from "@/lib/content";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import DashboardMockup from "@/components/DashboardMockup";
@@ -36,7 +36,7 @@ export default async function Home({ params }: { params: Promise<{ lang: Lang }>
       <Nav lang={l} nav={nav[l]} />
       <main>
         <Hero lang={l} content={hero[l]} />
-        <DashboardMockup lang={l} />
+        <DashboardMockup lang={l} content={mockup[l]} />
         <Features lang={l} content={features[l]} />
         <AISection lang={l} content={aiSection[l]} />
         <DataSection lang={l} content={dataSection[l]} />
