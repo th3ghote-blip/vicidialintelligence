@@ -54,6 +54,7 @@ export const hero = {
     sub: "Stop reading raw SQL reports. Get a live AI-powered dashboard that scores agents, flags behaviour patterns, and tells you exactly which campaigns are worth the dialling minutes — all without moving a single record off your server.",
     cta: "Book a Demo",
     ctaSub: "See Live Dashboard",
+    trust: ["No data moved off your server", "Read-only connection", "Live in 48 hours"],
   },
   es: {
     eyebrow: "Con IA · Autoalojado · Nativo para Vicidial",
@@ -61,6 +62,7 @@ export const hero = {
     sub: "Deja los reportes SQL en el pasado. Obtén un dashboard en vivo con IA que puntúa a tus agentes, detecta patrones de comportamiento y te dice exactamente qué campañas valen la pena — sin mover ni un solo dato fuera de tu servidor.",
     cta: "Reservar Demo",
     ctaSub: "Ver Dashboard en Vivo",
+    trust: ["Ningún dato sale de tu servidor", "Conexión de solo lectura", "En marcha en 48 horas"],
   },
   pt: {
     eyebrow: "Com IA · Auto-hospedado · Nativo para Vicidial",
@@ -68,6 +70,7 @@ export const hero = {
     sub: "Chega de relatórios SQL. Tenha um dashboard ao vivo com IA que pontua agentes, detecta padrões de comportamento e mostra exatamente quais campanhas valem os minutos de discagem — sem mover nenhum dado do seu servidor.",
     cta: "Agendar Demo",
     ctaSub: "Ver Dashboard ao Vivo",
+    trust: ["Nenhum dado sai do seu servidor", "Conexão somente leitura", "No ar em 48 horas"],
   },
 };
 

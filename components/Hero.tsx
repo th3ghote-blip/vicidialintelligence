@@ -2,7 +2,7 @@ import type { Lang } from "@/lib/content";
 
 const DEMO_URL = "https://vicidial-insights-ui.vercel.app";
 
-export default function Hero({ lang, content }: { lang: Lang; content: { eyebrow: string; headline: string; sub: string; cta: string; ctaSub: string } }) {
+export default function Hero({ lang, content }: { lang: Lang; content: { eyebrow: string; headline: string; sub: string; cta: string; ctaSub: string; trust: string[] } }) {
   return (
     <section className="relative overflow-hidden pt-20 pb-16 sm:pt-28 sm:pb-24">
       {/* Background glow */}
@@ -50,7 +50,7 @@ export default function Hero({ lang, content }: { lang: Lang; content: { eyebrow
 
         {/* Social proof */}
         <div className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-zinc-400">
-          {["No data moved off your server", "Read-only connection", "Live in 48 hours"].map((t, i) => (
+          {content.trust.map((t, i) => (
             <span key={i} className="flex items-center gap-1.5">
               <svg className="h-3.5 w-3.5 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
