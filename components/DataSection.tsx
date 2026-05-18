@@ -1,6 +1,20 @@
 import type { Lang } from "@/lib/content";
 
-export default function DataSection({ lang, content }: { lang: Lang; content: { eyebrow: string; heading: string; body: string; points: string[]; contrast: string } }) {
+type FlowItem = { label: string; sub: string };
+type DataSectionContent = {
+  eyebrow: string;
+  heading: string;
+  body: string;
+  points: string[];
+  contrast: string;
+  flowLabel: string;
+  flowItems: FlowItem[];
+};
+
+const FLOW_ICONS = ["🖥️", "🔒", "🤖", "📊"];
+const FLOW_COLORS = ["zinc", "sky", "emerald", "zinc"] as const;
+
+export default function DataSection({ lang, content }: { lang: Lang; content: DataSectionContent }) {
   return (
     <section id="data-security" className="py-20 px-4 sm:px-6 lg:px-8 border-t border-zinc-800/60">
       <div className="mx-auto max-w-7xl">
@@ -25,24 +39,23 @@ export default function DataSection({ lang, content }: { lang: Lang; content: { 
 
           {/* Architecture diagram */}
           <div className="rounded-2xl border border-zinc-800 bg-zinc-900/60 p-6">
-            <div className="text-xs text-zinc-500 font-medium mb-6">Data flow</div>
+            <div className="text-xs text-zinc-500 font-medium mb-6">{content.flowLabel}</div>
             <div className="space-y-4">
-              {[
-                { label: "Your Vicidial Server", sub: "MySQL + Asterisk recordings", color: "zinc", icon: "🖥️" },
-                { label: "Read-only connection", sub: "Encrypted, no writes ever", color: "sky", icon: "🔒", arrow: true },
-                { label: "Vicidial Intelligence", sub: "Analytics + AI processing", color: "emerald", icon: "🤖" },
-                { label: "Your browser", sub: "Dashboard — nothing stored", color: "zinc", icon: "📊", arrow: true },
-              ].map((item, i) => (
+              {content.flowItems.map((item, i) => (
                 <div key={i}>
-                  {item.arrow && (
+                  {i > 0 && (
                     <div className="flex justify-center my-1">
-                      <svg className={`h-5 w-5 text-${item.color}-500/60`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <svg className={`h-5 w-5 text-${FLOW_COLORS[i]}-500/60`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
                       </svg>
                     </div>
                   )}
-                  <div className={`flex items-center gap-3 rounded-xl border p-3 ${item.color === "emerald" ? "border-emerald-500/30 bg-emerald-500/10" : item.color === "sky" ? "border-sky-500/20 bg-sky-500/5" : "border-zinc-700 bg-zinc-900"}`}>
-                    <span className="text-xl">{item.icon}</span>
+                  <div className={`flex items-center gap-3 rounded-xl border p-3 ${
+                    FLOW_COLORS[i] === "emerald" ? "border-emerald-500/30 bg-emerald-500/10" :
+                    FLOW_COLORS[i] === "sky" ? "border-sky-500/20 bg-sky-500/5" :
+                    "border-zinc-700 bg-zinc-900"
+                  }`}>
+                    <span className="text-xl">{FLOW_ICONS[i]}</span>
                     <div>
                       <div className="text-sm font-medium text-zinc-200">{item.label}</div>
                       <div className="text-xs text-zinc-500 mt-0.5">{item.sub}</div>

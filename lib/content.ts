@@ -120,6 +120,14 @@ export const aiSection = {
       { title: "Multilingual", body: "Full support for English, Spanish, and Portuguese — useful if you run offshore or nearshore teams." },
       { title: "Private", body: "AI processing happens transiently. No call data is retained by the model provider. Your conversations stay yours." },
     ],
+    chatLabel: "AI Chat Interface",
+    chatPlaceholder: "Ask anything about your data...",
+    messages: [
+      { role: "user", msg: "Who had the best close rate on the Solar campaign last week?" },
+      { role: "ai", msg: "María García led Solar LATAM with 24.1% close rate — 3.8 points above the campaign average. She averaged 4.2 min per call and set 8 callbacks, all converted." },
+      { role: "user", msg: "What should I focus on today?" },
+      { role: "ai", msg: "3 agents in the watch list for declining momentum. Carlos Ruiz is rushing calls (32/hr, only 2.8% close) — worth a coaching call before the afternoon shift." },
+    ],
   },
   es: {
     eyebrow: "Impulsado por Claude AI",
@@ -130,6 +138,14 @@ export const aiSection = {
       { title: "Multilingüe", body: "Soporte completo en inglés, español y portugués — útil si gestionas equipos offshore o nearshore." },
       { title: "Privado", body: "El procesamiento de IA es transitorio. Ningún proveedor retiene tus datos de llamadas. Tus conversaciones son tuyas." },
     ],
+    chatLabel: "Interfaz de Chat IA",
+    chatPlaceholder: "Pregunta lo que quieras sobre tus datos...",
+    messages: [
+      { role: "user", msg: "¿Quién tuvo la mejor tasa de cierre en la campaña Solar la semana pasada?" },
+      { role: "ai", msg: "María García lideró Solar LATAM con 24,1% de tasa de cierre — 3,8 puntos por encima del promedio. Promedió 4,2 min por llamada y configuró 8 callbacks, todos convertidos." },
+      { role: "user", msg: "¿En qué debería enfocarme hoy?" },
+      { role: "ai", msg: "3 agentes en la lista de vigilancia por momentum decreciente. Carlos Ruiz está apresurado (32/hr, solo 2,8% cierre) — vale una llamada de coaching antes del turno de tarde." },
+    ],
   },
   pt: {
     eyebrow: "Impulsionado pelo Claude AI",
@@ -139,6 +155,14 @@ export const aiSection = {
       { title: "Extensível", body: "Adicione chat com IA, transcrição de voz, análise de sentimento ou modelos de pontuação personalizados conforme sua operação cresce." },
       { title: "Multilíngue", body: "Suporte completo em inglês, espanhol e português — útil se você gerencia equipes offshore ou nearshore." },
       { title: "Privado", body: "O processamento de IA é transitório. Nenhum provedor retém seus dados de chamadas. Suas conversas são suas." },
+    ],
+    chatLabel: "Interface de Chat IA",
+    chatPlaceholder: "Pergunte qualquer coisa sobre seus dados...",
+    messages: [
+      { role: "user", msg: "Quem teve a melhor taxa de fechamento na campanha Solar semana passada?" },
+      { role: "ai", msg: "María García liderou Solar LATAM com 24,1% de taxa de fechamento — 3,8 pontos acima da média. Ela teve 4,2 min por chamada em média e configurou 8 callbacks, todos convertidos." },
+      { role: "user", msg: "No que devo focar hoje?" },
+      { role: "ai", msg: "3 agentes na lista de atenção por momentum decrescente. Carlos Ruiz está apressando chamadas (32/hr, apenas 2,8% fechamento) — vale um coaching antes do turno da tarde." },
     ],
   },
 };
@@ -157,6 +181,13 @@ export const dataSection = {
       "On-premise deployment available for regulated industries",
     ],
     contrast: "GoAutoDial and other hosted platforms put your call data on their servers. Vicidial Intelligence leaves it exactly where it is.",
+    flowLabel: "Data flow",
+    flowItems: [
+      { label: "Your Vicidial Server", sub: "MySQL + Asterisk recordings" },
+      { label: "Read-only connection", sub: "Encrypted, no writes ever" },
+      { label: "Vicidial Intelligence", sub: "Analytics + AI processing" },
+      { label: "Your browser", sub: "Dashboard — nothing stored" },
+    ],
   },
   es: {
     eyebrow: "Residencia de Datos",
@@ -171,6 +202,13 @@ export const dataSection = {
       "Despliegue en local disponible para industrias reguladas",
     ],
     contrast: "GoAutoDial y otras plataformas alojadas ponen tus datos de llamadas en sus servidores. Vicidial Intelligence los deja exactamente donde están.",
+    flowLabel: "Flujo de datos",
+    flowItems: [
+      { label: "Tu servidor Vicidial", sub: "MySQL + grabaciones Asterisk" },
+      { label: "Conexión de solo lectura", sub: "Cifrada, sin escrituras" },
+      { label: "Vicidial Intelligence", sub: "Analítica + procesamiento IA" },
+      { label: "Tu navegador", sub: "Dashboard — nada almacenado" },
+    ],
   },
   pt: {
     eyebrow: "Residência de Dados",
@@ -185,6 +223,13 @@ export const dataSection = {
       "Implantação on-premise disponível para indústrias regulamentadas",
     ],
     contrast: "GoAutoDial e outras plataformas hospedadas colocam seus dados de chamadas nos servidores delas. Vicidial Intelligence os mantém exatamente onde estão.",
+    flowLabel: "Fluxo de dados",
+    flowItems: [
+      { label: "Seu servidor Vicidial", sub: "MySQL + gravações Asterisk" },
+      { label: "Conexão somente leitura", sub: "Criptografada, sem gravações" },
+      { label: "Vicidial Intelligence", sub: "Analytics + processamento IA" },
+      { label: "Seu navegador", sub: "Dashboard — nada armazenado" },
+    ],
   },
 };
 
