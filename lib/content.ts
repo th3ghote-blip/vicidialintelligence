@@ -1,0 +1,351 @@
+export type Lang = "en" | "es" | "pt";
+
+export const LANGS: Lang[] = ["en", "es", "pt"];
+
+export const meta = {
+  en: {
+    homeTitle: "Vicidial Intelligence — AI Analytics Dashboard for Vicidial Call Centres",
+    homeDesc: "Real-time AI-powered analytics, agent momentum tracking and call transcription for Vicidial. Your data stays on your server. From $1,000/mo.",
+    featuresTitle: "Features — Vicidial Intelligence",
+    featuresDesc: "AI analytics, agent performance scoring, campaign insights, call transcription and chat integration — all built for Vicidial.",
+    securityTitle: "Data Security & Self-Hosted — Vicidial Intelligence",
+    securityDesc: "Your Vicidial data never leaves your server. Read-only connection, GDPR-friendly, no third-party data storage.",
+    pricingTitle: "Pricing — Vicidial Intelligence",
+    pricingDesc: "Vicidial analytics from $1,000/mo. AI call transcription and scoring from $2,500/mo plus usage.",
+    blogTitle: "The Complete Guide to Vicidial Analytics in 2026",
+    blogDesc: "Why Vicidial's built-in reports fall short, what KPIs actually matter, and how AI is changing call centre intelligence.",
+  },
+  es: {
+    homeTitle: "Vicidial Intelligence — Dashboard de Analítica con IA para Call Centers Vicidial",
+    homeDesc: "Analítica en tiempo real con IA, seguimiento de momentum de agentes y transcripción de llamadas para Vicidial. Tus datos se quedan en tu servidor. Desde $1,000/mes.",
+    featuresTitle: "Funcionalidades — Vicidial Intelligence",
+    featuresDesc: "Analítica con IA, puntuación de rendimiento de agentes, insights de campañas, transcripción de llamadas e integración de chat — todo para Vicidial.",
+    securityTitle: "Seguridad de Datos y Autoalojamiento — Vicidial Intelligence",
+    securityDesc: "Tus datos de Vicidial nunca salen de tu servidor. Conexión de solo lectura, compatible con GDPR, sin almacenamiento en terceros.",
+    pricingTitle: "Precios — Vicidial Intelligence",
+    pricingDesc: "Analítica para Vicidial desde $1,000/mes. Transcripción y puntuación de llamadas con IA desde $2,500/mes más uso.",
+    blogTitle: "Guía Completa de Analítica para Vicidial en 2026",
+    blogDesc: "Por qué los reportes nativos de Vicidial no son suficientes, qué KPIs importan realmente y cómo la IA está transformando la inteligencia en los call centers.",
+  },
+  pt: {
+    homeTitle: "Vicidial Intelligence — Dashboard de Analytics com IA para Call Centers Vicidial",
+    homeDesc: "Analytics em tempo real com IA, acompanhamento de momentum de agentes e transcrição de chamadas para Vicidial. Seus dados ficam no seu servidor. A partir de $1.000/mês.",
+    featuresTitle: "Funcionalidades — Vicidial Intelligence",
+    featuresDesc: "Analytics com IA, pontuação de desempenho de agentes, insights de campanhas, transcrição de chamadas e integração de chat — tudo para Vicidial.",
+    securityTitle: "Segurança de Dados e Auto-hospedagem — Vicidial Intelligence",
+    securityDesc: "Seus dados do Vicidial nunca saem do seu servidor. Conexão somente leitura, compatível com LGPD/GDPR, sem armazenamento em terceiros.",
+    pricingTitle: "Preços — Vicidial Intelligence",
+    pricingDesc: "Analytics para Vicidial a partir de $1.000/mês. Transcrição e pontuação de chamadas com IA a partir de $2.500/mês mais uso.",
+    blogTitle: "Guia Completo de Analytics para Vicidial em 2026",
+    blogDesc: "Por que os relatórios nativos do Vicidial não são suficientes, quais KPIs realmente importam e como a IA está transformando a inteligência em call centers.",
+  },
+};
+
+export const nav = {
+  en: { features: "Features", security: "Data Security", pricing: "Pricing", demo: "Live Demo", contact: "Contact" },
+  es: { features: "Funcionalidades", security: "Seguridad", pricing: "Precios", demo: "Demo en Vivo", contact: "Contacto" },
+  pt: { features: "Funcionalidades", security: "Segurança", pricing: "Preços", demo: "Demo ao Vivo", contact: "Contato" },
+};
+
+export const hero = {
+  en: {
+    eyebrow: "AI-Powered · Self-Hosted · Vicidial Native",
+    headline: "Real Intelligence for Vicidial Call Centres",
+    sub: "Stop reading raw SQL reports. Get a live AI-powered dashboard that scores agents, flags behaviour patterns, and tells you exactly which campaigns are worth the dialling minutes — all without moving a single record off your server.",
+    cta: "Book a Demo",
+    ctaSub: "See Live Dashboard",
+  },
+  es: {
+    eyebrow: "Con IA · Autoalojado · Nativo para Vicidial",
+    headline: "Inteligencia Real para tu Call Center Vicidial",
+    sub: "Deja los reportes SQL en el pasado. Obtén un dashboard en vivo con IA que puntúa a tus agentes, detecta patrones de comportamiento y te dice exactamente qué campañas valen la pena — sin mover ni un solo dato fuera de tu servidor.",
+    cta: "Reservar Demo",
+    ctaSub: "Ver Dashboard en Vivo",
+  },
+  pt: {
+    eyebrow: "Com IA · Auto-hospedado · Nativo para Vicidial",
+    headline: "Inteligência Real para o seu Call Center Vicidial",
+    sub: "Chega de relatórios SQL. Tenha um dashboard ao vivo com IA que pontua agentes, detecta padrões de comportamento e mostra exatamente quais campanhas valem os minutos de discagem — sem mover nenhum dado do seu servidor.",
+    cta: "Agendar Demo",
+    ctaSub: "Ver Dashboard ao Vivo",
+  },
+};
+
+export const features = {
+  en: {
+    heading: "Everything Vicidial's reports don't give you",
+    sub: "Built specifically for Vicidial. Connects read-only to your existing database — no migration, no disruption.",
+    items: [
+      { icon: "📊", title: "Executive Dashboard", body: "Sales by hour, campaign breakdown, close rates, and trends at a glance. One screen, everything the owner needs to know." },
+      { icon: "🔥", title: "Agent Momentum", body: "See who's on a streak, who's cooling off, and who's developing bad habits — short calls, dialling without closing, unresolved callbacks." },
+      { icon: "🤖", title: "AI-Powered Scoring", body: "Claude AI analyses every lead and agent pattern, surfaces what the numbers are hiding, and writes plain-language recommendations." },
+      { icon: "📞", title: "Call Transcription", body: "Every call transcribed and scored by AI. Spot quality issues, coaching moments, and compliance risks automatically." },
+      { icon: "💬", title: "Chat Interface", body: "Ask your data questions in plain language. 'Who had the best close rate on campaign X last week?' — instant answer, no SQL." },
+      { icon: "📅", title: "Custom Timeframes", body: "Today, 7 days, 30 days, 90 days, or any custom range. Every chart, every metric updates instantly." },
+    ],
+  },
+  es: {
+    heading: "Todo lo que los reportes de Vicidial no te dan",
+    sub: "Construido específicamente para Vicidial. Se conecta en modo solo lectura a tu base de datos existente — sin migración, sin interrupciones.",
+    items: [
+      { icon: "📊", title: "Dashboard Ejecutivo", body: "Ventas por hora, desglose de campañas, tasas de cierre y tendencias de un vistazo. Una pantalla, todo lo que el director necesita saber." },
+      { icon: "🔥", title: "Momentum de Agentes", body: "Ve quién está en racha, quién está bajando el ritmo y quién está desarrollando malos hábitos — llamadas cortas, marcando sin cerrar, callbacks sin resolver." },
+      { icon: "🤖", title: "Puntuación con IA", body: "Claude AI analiza cada lead y patrón de agente, saca a la luz lo que los números ocultan y redacta recomendaciones en lenguaje claro." },
+      { icon: "📞", title: "Transcripción de Llamadas", body: "Cada llamada transcrita y puntuada por IA. Detecta problemas de calidad, momentos de coaching y riesgos de cumplimiento automáticamente." },
+      { icon: "💬", title: "Interfaz de Chat", body: "Haz preguntas sobre tus datos en lenguaje natural. '¿Quién tuvo la mejor tasa de cierre en la campaña X la semana pasada?' — respuesta instantánea." },
+      { icon: "📅", title: "Rangos Personalizados", body: "Hoy, 7 días, 30 días, 90 días o cualquier rango personalizado. Cada gráfico y métrica se actualiza al instante." },
+    ],
+  },
+  pt: {
+    heading: "Tudo que os relatórios do Vicidial não te dão",
+    sub: "Construído especificamente para Vicidial. Conecta em modo somente leitura ao seu banco de dados existente — sem migração, sem interrupções.",
+    items: [
+      { icon: "📊", title: "Dashboard Executivo", body: "Vendas por hora, breakdown de campanhas, taxas de fechamento e tendências de um só olhar. Uma tela, tudo que o gestor precisa saber." },
+      { icon: "🔥", title: "Momentum de Agentes", body: "Veja quem está em sequência, quem está esfriando e quem está desenvolvendo maus hábitos — chamadas curtas, discando sem fechar, callbacks sem resolver." },
+      { icon: "🤖", title: "Pontuação com IA", body: "Claude AI analisa cada lead e padrão de agente, revela o que os números escondem e gera recomendações em linguagem simples." },
+      { icon: "📞", title: "Transcrição de Chamadas", body: "Cada chamada transcrita e pontuada por IA. Detecte problemas de qualidade, momentos de coaching e riscos de compliance automaticamente." },
+      { icon: "💬", title: "Interface de Chat", body: "Faça perguntas sobre seus dados em linguagem natural. 'Quem teve a melhor taxa de fechamento na campanha X semana passada?' — resposta instantânea." },
+      { icon: "📅", title: "Períodos Personalizados", body: "Hoje, 7 dias, 30 dias, 90 dias ou qualquer período personalizado. Cada gráfico e métrica atualiza instantaneamente." },
+    ],
+  },
+};
+
+export const aiSection = {
+  en: {
+    eyebrow: "Powered by Claude AI",
+    heading: "AI that actually understands call centre data",
+    body: "Most dashboards show you numbers. Vicidial Intelligence tells you what those numbers mean and what to do about them. Claude AI reads your agent patterns, campaign trends, and lead pipeline — then writes plain-English (or Spanish, or Portuguese) recommendations your managers can act on immediately.",
+    extras: [
+      { title: "Extensible", body: "Add AI chat, voice transcription, sentiment analysis, or custom scoring models as your operation grows." },
+      { title: "Multilingual", body: "Full support for English, Spanish, and Portuguese — useful if you run offshore or nearshore teams." },
+      { title: "Private", body: "AI processing happens transiently. No call data is retained by the model provider. Your conversations stay yours." },
+    ],
+  },
+  es: {
+    eyebrow: "Impulsado por Claude AI",
+    heading: "IA que realmente entiende los datos de call center",
+    body: "La mayoría de los dashboards solo te muestran números. Vicidial Intelligence te dice qué significan esos números y qué hacer al respecto. Claude AI analiza los patrones de tus agentes, las tendencias de campañas y el pipeline de leads — y genera recomendaciones en español que tus managers pueden aplicar de inmediato.",
+    extras: [
+      { title: "Extensible", body: "Añade chat con IA, transcripción de voz, análisis de sentimiento o modelos de puntuación personalizados a medida que crece tu operación." },
+      { title: "Multilingüe", body: "Soporte completo en inglés, español y portugués — útil si gestionas equipos offshore o nearshore." },
+      { title: "Privado", body: "El procesamiento de IA es transitorio. Ningún proveedor retiene tus datos de llamadas. Tus conversaciones son tuyas." },
+    ],
+  },
+  pt: {
+    eyebrow: "Impulsionado pelo Claude AI",
+    heading: "IA que realmente entende dados de call center",
+    body: "A maioria dos dashboards só mostra números. Vicidial Intelligence diz o que esses números significam e o que fazer com eles. Claude AI lê os padrões dos seus agentes, tendências de campanhas e pipeline de leads — e gera recomendações em português que seus gestores podem aplicar imediatamente.",
+    extras: [
+      { title: "Extensível", body: "Adicione chat com IA, transcrição de voz, análise de sentimento ou modelos de pontuação personalizados conforme sua operação cresce." },
+      { title: "Multilíngue", body: "Suporte completo em inglês, espanhol e português — útil se você gerencia equipes offshore ou nearshore." },
+      { title: "Privado", body: "O processamento de IA é transitório. Nenhum provedor retém seus dados de chamadas. Suas conversas são suas." },
+    ],
+  },
+};
+
+export const dataSection = {
+  en: {
+    eyebrow: "Data Residency",
+    heading: "Your data never leaves your server",
+    body: "This is the feature your compliance team will thank you for. Vicidial Intelligence connects read-only to your existing Vicidial MySQL database. Nothing is copied, exported, or stored on our infrastructure.",
+    points: [
+      "Read-only MySQL connection — we cannot modify your data",
+      "Call recordings stay on your Asterisk server",
+      "AI processes audio transiently — discarded immediately after",
+      "Transcripts stored wherever you choose, or not at all",
+      "GDPR, LGPD, and HIPAA friendly by design",
+      "On-premise deployment available for regulated industries",
+    ],
+    contrast: "GoAutoDial and other hosted platforms put your call data on their servers. Vicidial Intelligence leaves it exactly where it is.",
+  },
+  es: {
+    eyebrow: "Residencia de Datos",
+    heading: "Tus datos nunca salen de tu servidor",
+    body: "Esta es la funcionalidad que agradecerá tu equipo de cumplimiento. Vicidial Intelligence se conecta en modo solo lectura a tu base de datos MySQL de Vicidial existente. Nada se copia, exporta o almacena en nuestra infraestructura.",
+    points: [
+      "Conexión MySQL de solo lectura — no podemos modificar tus datos",
+      "Las grabaciones de llamadas permanecen en tu servidor Asterisk",
+      "La IA procesa el audio de forma transitoria — descartado inmediatamente después",
+      "Las transcripciones se almacenan donde tú elijas, o en ningún lugar",
+      "Compatible con GDPR y normativas de protección de datos por diseño",
+      "Despliegue en local disponible para industrias reguladas",
+    ],
+    contrast: "GoAutoDial y otras plataformas alojadas ponen tus datos de llamadas en sus servidores. Vicidial Intelligence los deja exactamente donde están.",
+  },
+  pt: {
+    eyebrow: "Residência de Dados",
+    heading: "Seus dados nunca saem do seu servidor",
+    body: "Esta é a funcionalidade que sua equipe de compliance vai agradecer. Vicidial Intelligence conecta em modo somente leitura ao seu banco de dados MySQL do Vicidial existente. Nada é copiado, exportado ou armazenado na nossa infraestrutura.",
+    points: [
+      "Conexão MySQL somente leitura — não podemos modificar seus dados",
+      "Gravações de chamadas ficam no seu servidor Asterisk",
+      "A IA processa áudio de forma transitória — descartado imediatamente após",
+      "Transcrições armazenadas onde você escolher, ou em lugar nenhum",
+      "Compatível com LGPD, GDPR e HIPAA por design",
+      "Implantação on-premise disponível para indústrias regulamentadas",
+    ],
+    contrast: "GoAutoDial e outras plataformas hospedadas colocam seus dados de chamadas nos servidores delas. Vicidial Intelligence os mantém exatamente onde estão.",
+  },
+};
+
+export const pricing = {
+  en: {
+    heading: "Straightforward pricing",
+    sub: "No per-seat fees. No surprise lock-in. Cancel any time.",
+    plans: [
+      {
+        name: "Intelligence",
+        price: "$1,000",
+        period: "/mo",
+        desc: "Full analytics dashboard for your Vicidial operation.",
+        features: [
+          "Real-time executive dashboard",
+          "Agent momentum & behaviour flags",
+          "Campaign analytics & comparison",
+          "AI lead scoring & recommendations",
+          "Custom date ranges",
+          "EN / ES / PT interface",
+          "Read-only — zero impact on your dialler",
+        ],
+        cta: "Get Started",
+        highlight: false,
+      },
+      {
+        name: "Intelligence + AI Calls",
+        price: "$2,500",
+        period: "/mo + usage",
+        desc: "Everything in Intelligence, plus AI ears on every call.",
+        features: [
+          "Everything in Intelligence",
+          "Call transcription (all recordings)",
+          "AI quality scoring per call",
+          "Sentiment & compliance flags",
+          "AI chat interface for your data",
+          "Usage billed at cost + 15%",
+          "Private GPU option available",
+        ],
+        cta: "Book a Demo",
+        highlight: true,
+      },
+    ],
+    note: "Usage costs (transcription + AI) passed through at cost + 15%. Typical call centre: $300–500/mo additional.",
+  },
+  es: {
+    heading: "Precios claros",
+    sub: "Sin tarifas por asiento. Sin compromisos sorpresa. Cancela cuando quieras.",
+    plans: [
+      {
+        name: "Intelligence",
+        price: "$1.000",
+        period: "/mes",
+        desc: "Dashboard de analítica completo para tu operación Vicidial.",
+        features: [
+          "Dashboard ejecutivo en tiempo real",
+          "Momentum y alertas de comportamiento de agentes",
+          "Analítica y comparación de campañas",
+          "Puntuación de leads e recomendaciones con IA",
+          "Rangos de fechas personalizados",
+          "Interfaz en ES / EN / PT",
+          "Solo lectura — cero impacto en tu marcador",
+        ],
+        cta: "Comenzar",
+        highlight: false,
+      },
+      {
+        name: "Intelligence + IA en Llamadas",
+        price: "$2.500",
+        period: "/mes + uso",
+        desc: "Todo en Intelligence, más IA en cada llamada.",
+        features: [
+          "Todo lo de Intelligence",
+          "Transcripción de llamadas (todas las grabaciones)",
+          "Puntuación de calidad por llamada con IA",
+          "Alertas de sentimiento y cumplimiento",
+          "Chat con IA sobre tus datos",
+          "Uso facturado a costo + 15%",
+          "Opción de GPU privada disponible",
+        ],
+        cta: "Reservar Demo",
+        highlight: true,
+      },
+    ],
+    note: "Los costos de uso (transcripción + IA) se repercuten a costo + 15%. Call center típico: $300–500/mes adicional.",
+  },
+  pt: {
+    heading: "Preços transparentes",
+    sub: "Sem taxas por assento. Sem lock-in surpresa. Cancele quando quiser.",
+    plans: [
+      {
+        name: "Intelligence",
+        price: "$1.000",
+        period: "/mês",
+        desc: "Dashboard de analytics completo para sua operação Vicidial.",
+        features: [
+          "Dashboard executivo em tempo real",
+          "Momentum e alertas de comportamento de agentes",
+          "Analytics e comparação de campanhas",
+          "Pontuação de leads e recomendações com IA",
+          "Períodos personalizados",
+          "Interface em PT / ES / EN",
+          "Somente leitura — zero impacto no seu discador",
+        ],
+        cta: "Começar",
+        highlight: false,
+      },
+      {
+        name: "Intelligence + IA em Chamadas",
+        price: "$2.500",
+        period: "/mês + uso",
+        desc: "Tudo do Intelligence, mais IA em cada chamada.",
+        features: [
+          "Tudo do Intelligence",
+          "Transcrição de chamadas (todas as gravações)",
+          "Pontuação de qualidade por chamada com IA",
+          "Alertas de sentimento e compliance",
+          "Interface de chat com IA para seus dados",
+          "Uso faturado a custo + 15%",
+          "Opção de GPU privada disponível",
+        ],
+        cta: "Agendar Demo",
+        highlight: true,
+      },
+    ],
+    note: "Custos de uso (transcrição + IA) repassados a custo + 15%. Call center típico: $300–500/mês adicional.",
+  },
+};
+
+export const contact = {
+  en: {
+    heading: "Ready to see it on your data?",
+    sub: "Send us a message and we'll set up a live demo using your Vicidial environment — or show you the live demo instance first.",
+    namePlaceholder: "Your name",
+    emailPlaceholder: "Work email",
+    msgPlaceholder: "Tell us about your operation — number of agents, campaigns, countries...",
+    send: "Send Message",
+    or: "or email us directly at",
+  },
+  es: {
+    heading: "¿Listo para verlo con tus datos?",
+    sub: "Envíanos un mensaje y organizamos una demo en vivo usando tu entorno Vicidial — o te mostramos primero la instancia de demo en vivo.",
+    namePlaceholder: "Tu nombre",
+    emailPlaceholder: "Email de trabajo",
+    msgPlaceholder: "Cuéntanos sobre tu operación — número de agentes, campañas, países...",
+    send: "Enviar Mensaje",
+    or: "o escríbenos directamente a",
+  },
+  pt: {
+    heading: "Pronto para ver com seus dados?",
+    sub: "Envie uma mensagem e organizamos uma demo ao vivo usando seu ambiente Vicidial — ou mostramos primeiro a instância de demo ao vivo.",
+    namePlaceholder: "Seu nome",
+    emailPlaceholder: "Email profissional",
+    msgPlaceholder: "Conte-nos sobre sua operação — número de agentes, campanhas, países...",
+    send: "Enviar Mensagem",
+    or: "ou escreva diretamente para",
+  },
+};
+
+export const footer = {
+  en: { tagline: "AI-powered intelligence for Vicidial call centres.", rights: "All rights reserved." },
+  es: { tagline: "Inteligencia con IA para call centers Vicidial.", rights: "Todos los derechos reservados." },
+  pt: { tagline: "Inteligência com IA para call centers Vicidial.", rights: "Todos os direitos reservados." },
+};
