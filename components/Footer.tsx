@@ -20,16 +20,16 @@ export default function Footer({ lang, content, nav }: { lang: Lang; content: { 
             <p className="text-xs text-zinc-600 leading-relaxed">{content.tagline}</p>
           </div>
           <div>
-            <div className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-3">Product</div>
+            <div className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-3">{nav.product}</div>
             <div className="space-y-2">
-              <Link href={`${base}/features`} className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors">{nav.features}</Link>
-              <Link href={`${base}/data-security`} className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors">{nav.security}</Link>
-              <Link href={`${base}/pricing`} className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors">{nav.pricing}</Link>
+              <a href={`${base}#features`} className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors">{nav.features}</a>
+              <a href={`${base}#data-security`} className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors">{nav.security}</a>
+              <a href={`${base}#pricing`} className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors">{nav.pricing}</a>
               <a href="https://vicidial-insights-ui.vercel.app" target="_blank" rel="noopener noreferrer" className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors">{nav.demo}</a>
             </div>
           </div>
           <div>
-            <div className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-3">Languages</div>
+            <div className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-3">{nav.languages}</div>
             <div className="space-y-2">
               <Link href="/en" className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors">English</Link>
               <Link href="/es" className="block text-sm text-zinc-500 hover:text-zinc-300 transition-colors">Español</Link>

@@ -42,9 +42,9 @@ export const meta = {
 };
 
 export const nav = {
-  en: { features: "Features", security: "Data Security", pricing: "Pricing", demo: "Live Demo", contact: "Contact" },
-  es: { features: "Funcionalidades", security: "Seguridad", pricing: "Precios", demo: "Demo en Vivo", contact: "Contacto" },
-  pt: { features: "Funcionalidades", security: "Segurança", pricing: "Preços", demo: "Demo ao Vivo", contact: "Contato" },
+  en: { product: "Product", features: "Features", security: "Data Security", pricing: "Pricing", demo: "Live Demo", contact: "Contact", languages: "Languages" },
+  es: { product: "Producto", features: "Funcionalidades", security: "Seguridad", pricing: "Precios", demo: "Demo en Vivo", contact: "Contacto", languages: "Idiomas" },
+  pt: { product: "Produto", features: "Funcionalidades", security: "Segurança", pricing: "Preços", demo: "Demo ao Vivo", contact: "Contato", languages: "Idiomas" },
 };
 
 export const hero = {
