@@ -374,30 +374,15 @@ export const pricing = {
 export const contact = {
   en: {
     heading: "Ready to see it on your data?",
-    sub: "Send us a message and we'll set up a live demo using your Vicidial environment — or show you the live demo instance first.",
-    namePlaceholder: "Your name",
-    emailPlaceholder: "Work email",
-    msgPlaceholder: "Tell us about your operation — number of agents, campaigns, countries...",
-    send: "Send Message",
-    or: "or email us directly at",
+    sub: "Email us to book a live demo using your Vicidial environment.",
   },
   es: {
     heading: "¿Listo para verlo con tus datos?",
-    sub: "Envíanos un mensaje y organizamos una demo en vivo usando tu entorno Vicidial — o te mostramos primero la instancia de demo en vivo.",
-    namePlaceholder: "Tu nombre",
-    emailPlaceholder: "Email de trabajo",
-    msgPlaceholder: "Cuéntanos sobre tu operación — número de agentes, campañas, países...",
-    send: "Enviar Mensaje",
-    or: "o escríbenos directamente a",
+    sub: "Escríbenos para reservar una demo en vivo con tu entorno Vicidial.",
   },
   pt: {
     heading: "Pronto para ver com seus dados?",
-    sub: "Envie uma mensagem e organizamos uma demo ao vivo usando seu ambiente Vicidial — ou mostramos primeiro a instância de demo ao vivo.",
-    namePlaceholder: "Seu nome",
-    emailPlaceholder: "Email profissional",
-    msgPlaceholder: "Conte-nos sobre sua operação — número de agentes, campanhas, países...",
-    send: "Enviar Mensagem",
-    or: "ou escreva diretamente para",
+    sub: "Escreva-nos para agendar uma demo ao vivo com seu ambiente Vicidial.",
   },
 };
 
