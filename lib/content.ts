@@ -2,6 +2,9 @@ export type Lang = "en" | "es" | "pt";
 
 export const LANGS: Lang[] = ["en", "es", "pt"];
 
+// Public Cal.com booking page — 20-min demo slot (event type 6606205)
+export const BOOKING_URL = "https://cal.com/th3-ghote-6rxzwh/vicidial-demo";
+
 export const meta = {
   en: {
     homeTitle: "Vicidial Intelligence — AI Analytics Dashboard for Vicidial Call Centres",
@@ -373,16 +376,112 @@ export const pricing = {
 
 export const contact = {
   en: {
-    heading: "Ready to see it on your data?",
-    sub: "Email us to book a live demo using your Vicidial environment.",
+    heading: "See it on your data — free",
+    sub: "Book a 20-minute call. We'll connect to your Vicidial (read-only), show you your own dashboard live, and you decide from there. No payment, no commitment.",
+    bookCta: "Book a Free Demo",
+    orEmail: "or email us at",
   },
   es: {
-    heading: "¿Listo para verlo con tus datos?",
-    sub: "Escríbenos para reservar una demo en vivo con tu entorno Vicidial.",
+    heading: "Velo con tus datos — gratis",
+    sub: "Reserva una llamada de 20 minutos. Nos conectamos a tu Vicidial (solo lectura), te mostramos tu propio dashboard en vivo y tú decides. Sin pago, sin compromiso.",
+    bookCta: "Reservar Demo Gratis",
+    orEmail: "o escríbenos a",
   },
   pt: {
-    heading: "Pronto para ver com seus dados?",
-    sub: "Escreva-nos para agendar uma demo ao vivo com seu ambiente Vicidial.",
+    heading: "Veja com seus dados — grátis",
+    sub: "Agende uma chamada de 20 minutos. Conectamos ao seu Vicidial (somente leitura), mostramos seu próprio dashboard ao vivo e você decide. Sem pagamento, sem compromisso.",
+    bookCta: "Agendar Demo Grátis",
+    orEmail: "ou escreva para",
+  },
+};
+
+export const faq = {
+  en: {
+    heading: "Frequently asked questions",
+    items: [
+      {
+        q: "Will it slow down or affect our dialler?",
+        a: "No. The connection is strictly read-only and queries run against a cached layer refreshed every few minutes — your Vicidial server never takes load from dashboard users. We cannot write, modify, or delete anything.",
+      },
+      {
+        q: "What do you need from us to get started?",
+        a: "One thing: a read-only MySQL user on your Vicidial database (your admin can create it in two minutes) and network access to reach it. That's it — no software installed on your server, no changes to your dialler. Typical go-live is 48 hours.",
+      },
+      {
+        q: "Which Vicidial versions are supported?",
+        a: "Any standard Vicidial install on MySQL or MariaDB — including older 2.x builds. Custom dispositions and campaign structures are configured during setup, not hardcoded.",
+      },
+      {
+        q: "Where does our data live?",
+        a: "On your server, where it already is. The dashboard reads live from your database; nothing is copied, exported, or stored on our infrastructure. Call recordings never leave your Asterisk server.",
+      },
+      {
+        q: "What does the AI actually see?",
+        a: "Aggregated stats — close rates, call counts, patterns. For call transcription (the higher tier), audio is processed transiently and discarded immediately; no model provider retains your data.",
+      },
+      {
+        q: "Is there a contract or minimum term?",
+        a: "Month-to-month, cancel any time. And before you pay anything, we show you the dashboard running on your own data — so you're never buying blind.",
+      },
+    ],
+  },
+  es: {
+    heading: "Preguntas frecuentes",
+    items: [
+      {
+        q: "¿Ralentizará o afectará nuestro marcador?",
+        a: "No. La conexión es estrictamente de solo lectura y las consultas van contra una capa de caché que se actualiza cada pocos minutos — tu servidor Vicidial nunca recibe carga de los usuarios del dashboard. No podemos escribir, modificar ni borrar nada.",
+      },
+      {
+        q: "¿Qué necesitan de nosotros para empezar?",
+        a: "Una sola cosa: un usuario MySQL de solo lectura en tu base de datos Vicidial (tu administrador lo crea en dos minutos) y acceso de red. Nada más — sin software en tu servidor, sin cambios en tu marcador. Puesta en marcha típica: 48 horas.",
+      },
+      {
+        q: "¿Qué versiones de Vicidial son compatibles?",
+        a: "Cualquier instalación estándar de Vicidial sobre MySQL o MariaDB — incluidas versiones 2.x antiguas. Las disposiciones y estructuras de campañas personalizadas se configuran durante la instalación, no están predefinidas.",
+      },
+      {
+        q: "¿Dónde viven nuestros datos?",
+        a: "En tu servidor, donde ya están. El dashboard lee en vivo de tu base de datos; nada se copia, exporta ni almacena en nuestra infraestructura. Las grabaciones nunca salen de tu servidor Asterisk.",
+      },
+      {
+        q: "¿Qué ve realmente la IA?",
+        a: "Estadísticas agregadas — tasas de cierre, volúmenes de llamadas, patrones. Para la transcripción de llamadas (plan superior), el audio se procesa de forma transitoria y se descarta de inmediato; ningún proveedor de modelos retiene tus datos.",
+      },
+      {
+        q: "¿Hay contrato o permanencia mínima?",
+        a: "Mes a mes, cancela cuando quieras. Y antes de pagar nada, te mostramos el dashboard funcionando con tus propios datos — nunca compras a ciegas.",
+      },
+    ],
+  },
+  pt: {
+    heading: "Perguntas frequentes",
+    items: [
+      {
+        q: "Vai deixar nosso discador lento ou afetá-lo?",
+        a: "Não. A conexão é estritamente somente leitura e as consultas rodam contra uma camada de cache atualizada a cada poucos minutos — seu servidor Vicidial nunca recebe carga dos usuários do dashboard. Não podemos escrever, modificar ou apagar nada.",
+      },
+      {
+        q: "O que vocês precisam de nós para começar?",
+        a: "Uma coisa só: um usuário MySQL somente leitura no seu banco Vicidial (seu admin cria em dois minutos) e acesso de rede. Só isso — sem software no seu servidor, sem mudanças no discador. Go-live típico: 48 horas.",
+      },
+      {
+        q: "Quais versões do Vicidial são suportadas?",
+        a: "Qualquer instalação padrão do Vicidial sobre MySQL ou MariaDB — incluindo builds 2.x antigos. Disposições e estruturas de campanha personalizadas são configuradas na implantação, não são fixas.",
+      },
+      {
+        q: "Onde ficam nossos dados?",
+        a: "No seu servidor, onde já estão. O dashboard lê ao vivo do seu banco; nada é copiado, exportado ou armazenado na nossa infraestrutura. Gravações nunca saem do seu servidor Asterisk.",
+      },
+      {
+        q: "O que a IA realmente vê?",
+        a: "Estatísticas agregadas — taxas de fechamento, volumes de chamadas, padrões. Para transcrição de chamadas (plano superior), o áudio é processado de forma transitória e descartado imediatamente; nenhum provedor de modelo retém seus dados.",
+      },
+      {
+        q: "Existe contrato ou fidelidade mínima?",
+        a: "Mês a mês, cancele quando quiser. E antes de pagar qualquer coisa, mostramos o dashboard rodando com seus próprios dados — você nunca compra no escuro.",
+      },
+    ],
   },
 };
 

@@ -1,4 +1,4 @@
-import type { Lang } from "@/lib/content";
+import { BOOKING_URL, type Lang } from "@/lib/content";
 
 type Plan = { name: string; price: string; period: string; setup: string; desc: string; features: string[]; cta: string; highlight: boolean };
 
@@ -33,7 +33,7 @@ export default function Pricing({ lang, content }: { lang: Lang; content: { head
                   </li>
                 ))}
               </ul>
-              <a href="#contact" className={`w-full text-center py-3 rounded-xl text-sm font-semibold transition-all ${plan.highlight ? "bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-500/20" : "border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white"}`}>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className={`w-full text-center py-3 rounded-xl text-sm font-semibold transition-all ${plan.highlight ? "bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-500/20" : "border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white"}`}>
                 {plan.cta}
               </a>
             </div>

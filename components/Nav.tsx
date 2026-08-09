@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import type { Lang } from "@/lib/content";
+import { BOOKING_URL, type Lang } from "@/lib/content";
 
 const DEMO_URL = "https://vicidial-insights-ui.vercel.app";
 
@@ -41,7 +41,7 @@ export default function Nav({ lang, nav }: { lang: Lang; nav: Record<string, str
               className="text-sm text-zinc-300 border border-zinc-700 rounded-lg px-4 py-1.5 hover:border-zinc-500 transition-colors">
               {nav.demo}
             </a>
-            <a href={`#contact`}
+            <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer"
               className="text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg px-4 py-1.5 transition-colors font-medium">
               {nav.contact}
             </a>
